@@ -1,0 +1,26 @@
+{
+  "name": "Primeira Viagem — guia da gestante",
+  "short_name": "Primeira Viagem",
+  "description": "Acompanhamento completo e acolhedor para gestantes e mães de primeira viagem.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf8f4",
+  "theme_color": "#fdf8f4",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
