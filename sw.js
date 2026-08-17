@@ -1,12 +1,46 @@
-const VERSION = "v1";
+const VERSION = "v2";
 const RUNTIME_CACHE = `primeira-viagem-runtime-${VERSION}`;
+
+// Telas principais pré-carregadas na instalação para continuarem acessíveis offline
+// mesmo antes de a usuária visitá-las manualmente.
+const CORE_PATHS = [
+  "",
+  "bebe/",
+  "agenda/",
+  "checklist/",
+  "corpo/",
+  "mala/",
+  "diario/",
+  "alimentacao/",
+  "alertas/",
+  "nascimento/",
+  "favoritos/",
+  "mais/",
+  "configuracoes/",
+  "privacidade/",
+  "termos/",
+  "manifest.webmanifest",
+  "icon.svg",
+];
 
 function getScopePath() {
   return new URL(self.registration.scope).pathname;
 }
 
-self.addEventListener("install", () => {
-  self.skipWaiting();
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    (async () => {
+      const scope = self.registration.scope;
+      const cache = await caches.open(RUNTIME_CACHE);
+      await Promise.allSettled(
+        CORE_PATHS.map(async (path) => {
+          const response = await fetch(scope + path, { cache: "no-cache" });
+          if (response && response.ok) await cache.put(scope + path, response);
+        })
+      );
+      await self.skipWaiting();
+    })()
+  );
 });
 
 self.addEventListener("activate", (event) => {
