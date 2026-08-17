@@ -1,2 +1,2 @@
-:HL["/primeira-viagem-PREVIEW/_next/static/chunks/0cm1qomcnanyg.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"8BvmFWdWimKP77EIQVZr1"}
+:HL["/primeira-viagem-PREVIEW/_next/static/chunks/030nsayyal3e8.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"SNyjM7xKoqhFzIOk0m0li"}
